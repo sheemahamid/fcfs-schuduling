@@ -32,3 +32,11 @@ for index in range(3):
      turnaround[index]=btime[index]+waitingtime[index]
      print("turnaround :"), turnaround[index]
      starttime=starttime+btime[index]
+avgwaittime=0
+avgttime=0
+
+for j in range(3):
+     avgwaittime=avgwaittime+waitingtime[j]    
+     avgttime=avgttime+turnaround[j]
+print ("average waitingtime "),avgwaittime/len(processes)
+print ("average turnaroundtime"),avgttime/len(processes)

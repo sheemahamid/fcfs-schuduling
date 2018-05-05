@@ -20,6 +20,7 @@ totalwt=0
 i=0
 for i in range(3):
      totalwt=totalwt+waitingtime[i]    
-
-print ("avgtime "),totalwt/len(processes)
+     totalturnaround=totalturnaround+turnaround[i]
+print ("average waiting time "),totalwt/len(processes)
+print("average turnaround time"),totalturnaround/len(processes)
 

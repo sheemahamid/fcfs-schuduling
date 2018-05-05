@@ -32,7 +32,7 @@ while(1):
 	    if rbtime[i] > iostime:
                cur= cur+iostime
 	       rbtime[i]=rbtime[i]-iostime
-	       rbtime[i]=cur+iotime
+	       remainingtime[i]=cur+iotime
                wtq[addv]= returntime[i]
 	       wtq[addv]= rbtime[i]
                wtq[addv]= position[i]	

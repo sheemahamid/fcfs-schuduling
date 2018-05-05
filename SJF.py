@@ -5,8 +5,8 @@ bursttime=[5,10,15]
 arrivaltime=[0,0,0]
 finishtime=0
 starttime=0
-turnaround=[0]*5
-waitingtime=[0]*5
+turnaround=[0]*3
+waitingtime=[0]*3
 minimum=bursttime[0]
 index=0
 i=0
@@ -29,4 +29,12 @@ for index in range(3):
     turnaround[index]=finishtime-arrivaltime[index]
     print turnaround[index]
     starttime=starttime+bursttime[index]
+avgwait=0
+avgturn=0
+for j in range(4):
+     avgwait=avgwait+waitingtime[j]    
+     avgturn= avgturn+turnaround[j]
+print ("average waiting time "),avgwait/len(processes)
+print("average turnaroundtime"),avgturn/len(processes)
+
      
